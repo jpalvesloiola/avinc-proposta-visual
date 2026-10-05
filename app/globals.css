@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss/index.css";
 
 :root {
   --forest-950: #102e27;
@@ -2091,5 +2091,39 @@ img {
 @media (max-width: 520px) {
   .report-copy {
     padding: 26px 22px;
+  }
+}
+
+/* Apoie */
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.support-card {
+  padding: 2rem;
+  background: var(--sand-soft);
+  border: 1px solid var(--line);
+}
+
+.support-card h3 {
+  margin: 0.75rem 0 1rem;
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: var(--forest-950);
+}
+
+.support-card p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .support-grid {
+    grid-template-columns: 1fr;
   }
 }

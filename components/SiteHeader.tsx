@@ -44,14 +44,14 @@ export function SiteHeader() {
                 </Link>
               );
             })}
-            <a className="button button-small button-green mobile-support" href="https://www.avidanocerrado.com/apoie">
+            <Link className="button button-small button-green mobile-support" href="/apoie">
               Apoie
-            </a>
+            </Link>
           </nav>
 
-          <a className="button button-small button-green desktop-support" href="https://www.avidanocerrado.com/apoie">
+          <Link className="button button-small button-green desktop-support" href="/apoie">
             Apoie
-          </a>
+          </Link>
           <button
             aria-expanded={open}
             aria-label={open ? "Fechar menu" : "Abrir menu"}

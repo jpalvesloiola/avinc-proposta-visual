@@ -40,4 +40,6 @@ next-env.d.ts
 /.sites-runtime/
 /outputs/
 /work/
-.vscode/launch.json
+
+# vscode
+/.vscode/

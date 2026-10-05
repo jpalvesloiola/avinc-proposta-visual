@@ -55,12 +55,7 @@ export default defineConfig(async () => {
     plugins: [
       vinext(),
       sites(),
-      nitro({ preset: "vercel" }),
-      cloudflare({
-        viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
-        inspectorPort: false,
-        config: localBindingConfig,
-      }),
+      nitro(),
     ],
   };
 });

@@ -7,14 +7,20 @@ const reports = [
     title: "Relatório anual 2024",
     description:
       "Documento institucional com o registro das ações, projetos e resultados da AVINC no período.",
+    format: "WEB",
+    formatLabel: "Página institucional",
     href: "https://www.avidanocerrado.com/transparencia",
+    linkLabel: "Consultar transparência",
   },
   {
     year: "2023",
     title: "Relatório anual 2023",
     description:
       "Relatório anual disponibilizado pela AVINC para consulta pública e prestação de contas.",
+    format: "PDF",
+    formatLabel: "Relatório anual",
     href: "https://www.avidanocerrado.com/_files/ugd/985c3a_12fec3062e5a44c48cda6ab2a99fb14e.pdf",
+    linkLabel: "Abrir relatório PDF",
   },
 ];
 
@@ -56,18 +62,20 @@ export default function TransparencyPage() {
             <div className="report-grid">
               {reports.map((report) => (
                 <article className="report-card" key={report.year}>
-                  <div className="report-cover" aria-hidden="true">
-                    <span>{report.year}</span>
-                    <span className="report-mark">AVINC</span>
+                  <div className="report-card-header">
+                    <span className="resource-format" aria-hidden="true">
+                      {report.format}
+                    </span>
+                    <div>
+                      <p className="project-meta">{report.formatLabel}</p>
+                      <p className="report-period">Ano-base {report.year}</p>
+                    </div>
                   </div>
-                  <div className="report-copy">
-                    <p className="project-meta">Relatório anual · {report.year}</p>
-                    <h3>{report.title}</h3>
-                    <p>{report.description}</p>
-                    <a className="text-link" href={report.href} target="_blank" rel="noreferrer">
-                      Consultar relatório <span aria-hidden="true">↗</span>
-                    </a>
-                  </div>
+                  <h3>{report.title}</h3>
+                  <p className="report-description">{report.description}</p>
+                  <a className="text-link report-link" href={report.href} target="_blank" rel="noreferrer">
+                    {report.linkLabel} <span aria-hidden="true">↗</span>
+                  </a>
                 </article>
               ))}
             </div>
